@@ -1,0 +1,19 @@
+CREATE TABLE demo (
+  _id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  value INTEGER NOT NULL
+);
+
+select_all:
+SELECT *
+FROM demo;
+
+select_by_name:
+SELECT *
+FROM demo
+WHERE name = ?;
+
+select_by_value:
+SELECT *
+FROM demo
+WHERE value = ?;
