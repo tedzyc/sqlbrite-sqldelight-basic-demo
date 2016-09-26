@@ -23,8 +23,8 @@ import rx.schedulers.Schedulers;
     return new MainActivity.ItemAdapter(Lists.newArrayList());
   }
 
-  @Provides BriteDatabase provideDb(Context context) {
+  @Provides BriteDatabase provideBriteDatabase(Context context) {
     return SqlBrite.create()
-        .wrapDatabaseHelper(HockeyOpenHelper.getInstance(context), Schedulers.io());
+        .wrapDatabaseHelper(DemoOpenHelper.getInstance(context), Schedulers.io());
   }
 }
